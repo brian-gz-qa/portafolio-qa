@@ -126,6 +126,32 @@
 - ✅ Cuenta: alerta de actividad sospechosa disipada (clic en "¡Entendido!"), 27 contactos operativo
 - ✅ Memoria persistente creada: `MEMORIA_BRIAN.md`
 
+## ⚙️ SISTEMA DE GESTIÓN DIARIA AUTOMÁTICA (cronograma)
+
+**Tarea programada:** `LinkedInRutinaDiaria` — todos los días a las **10:00** (Windows Task Scheduler)
+**Script:** `rutina_diaria.py` (en CLAUDE CODE) — ejecuta:
+1. Comentar con valor en 1 publicación del feed (con reintentos)
+2. Publicar 1 post con imagen generada (tema del día: `--tema errores_casos|api_basico|bug_jira|equivalencia|pregunta`)
+3. Revisar bandeja de mensajes → guarda en `bandeja_hoy.txt`
+
+**Imágenes:** `gen_imagen_contenido.py` — genera PNG 1200x630 (HTML→PNG con Edge) con marca "BRIAN GONZÁLEZ · QA"
+
+**Requisito CRÍTICO:** Edge debe estar abierto con la sesión de LinkedIn y el puerto 9222.
+- Lanzador: `LINKEDIN_ABRIR.bat` (en el Escritorio, creado por `instalar_cronograma.bat`)
+- Si Edge no está abierto con el puerto, la rutina NO puede conectarse
+
+**Comandos útiles:**
+- Probar sin publicar: `python rutina_diaria.py --solo-revisar`
+- Publicar con tema: `python rutina_diaria.py --tema api_basico`
+- Generar solo imagen: `python gen_imagen_contenido.py errores_casos -o img.png`
+
+**Textos de publicación disponibles** (en `rutina_diaria.py` → TEXTOS_PUBLICACION): errores_casos, api_basico, bug_jira, equivalencia
+
+## 🔗 WATERMARKS-REMOVER (revisado 15/ago/2026)
+
+- Repo: github.com/guillaumemeyer/watermarks-remover — limpia marcas de agua de IA (C2PA/EXIF/Unicode) de archivos propios
+- **Decisión:** NO se instaló. Nuestras imágenes se generan como HTML→PNG (sin metadatos de IA), así que no hace falta. Además, la cuenta ya fue marcada por actividad sospechosa — no conviene usar herramientas de "limpieza de marcas" que puedan levantar más alertas. Si algún día se generan imágenes con IA (Claude/Gemini), se puede reconsiderar SOLO para contenido propio.
+
 ---
 
 *Última actualización: 15 de agosto de 2026*
