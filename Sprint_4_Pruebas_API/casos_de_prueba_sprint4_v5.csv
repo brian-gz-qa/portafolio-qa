@@ -1,0 +1,438 @@
+﻿No,Caso de Prueba,Precondiciones,Datos de la prueba,Pasos,Resultado esperado,Resultado obtenido,Estatus,Enlace al defecto
+1,"Agregar un producto existente a un kit existente","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 1,
+      ""quantity"": 1
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 200 OK
+- El producto se agrega correctamente",,,
+2,"Agregar límite máximo permitido de productos únicos (30 productos)","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {""id"": 1, ""quantity"": 1},
+    {""id"": 2, ""quantity"": 1}
+    // ... (hasta 30)
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 200 OK
+- Los productos se agregan correctamente",,,
+3,"Exceder límite máximo permitido de productos únicos (31 productos)","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {""id"": 1, ""quantity"": 1},
+    {""id"": 2, ""quantity"": 1}
+    // ... (hasta 31)
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 400 Bad Request
+- Mensaje: No más de 30 artículos por conjunto",,,
+4,"Agregar cantidad máxima en quantity","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 1,
+      ""quantity"": 99
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 200 OK
+- El producto se agrega correctamente",,,
+5,"Agregar producto con quantity límite inferior (0)","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 1,
+      ""quantity"": 0
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 400 Bad Request
+- No se permite cantidad cero",,,
+6,"Agregar producto con quantity negativo (-1)","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 1,
+      ""quantity"": -1
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 400 Bad Request
+- Cantidad inválida",,,
+7,"ID de kit no existente","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/9999/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 1,
+      ""quantity"": 1
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/9999/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 404 Not Found
+- Kit no encontrado",,,
+8,"ID de producto no existente","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 9999,
+      ""quantity"": 1
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 400 Bad Request
+- Producto no encontrado",,,
+9,"ID de kit en números romanos","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/VI/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 1,
+      ""quantity"": 1
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/VI/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 404 Not Found / 400 Bad Request",,,
+10,"Body: omitir quantity","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": [
+    {
+      ""id"": 1
+    }
+  ]
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 400 Bad Request",,,
+11,"Body: productsList vacío","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{
+  ""productsList"": []
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 400 Bad Request",,,
+12,"Body vacío","1. Existe un kit válido en el sistema (ejemplo: id=6).
+2. El usuario tiene acceso a la API mediante Postman.
+3. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /api/v1/kits/6/products
+
+Body:
+{}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /api/v1/kits/{{kit_id_de_la_precondicion_1}}/products
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el mensaje devuelto por la API.","- Codigo de Respuesta: 400 Bad Request",,,
+13,"Cálculo exitoso de entrega (valores medios)","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": 12,
+  ""productsCount"": 2,
+  ""productsWeight"": 1
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 200 OK
+- isItPossibleToDeliver: true",,,
+14,"deliveryTime en límite inferior permitido (ej. 8)","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": 8,
+  ""productsCount"": 2,
+  ""productsWeight"": 1
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 200 OK
+- isItPossibleToDeliver: true",,,
+15,"deliveryTime fuera de límite (ej. 7)","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": 7,
+  ""productsCount"": 2,
+  ""productsWeight"": 1
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 200 OK
+- isItPossibleToDeliver: false",,,
+16,"deliveryTime en límite superior permitido (ej. 20)","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": 20,
+  ""productsCount"": 2,
+  ""productsWeight"": 1
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 200 OK
+- isItPossibleToDeliver: true",,,
+17,"deliveryTime fuera de límite superior (ej. 21)","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": 21,
+  ""productsCount"": 2,
+  ""productsWeight"": 1
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 200 OK
+- isItPossibleToDeliver: false",,,
+18,"deliveryTime con tipo inválido (texto)","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": ""ocho"",
+  ""productsCount"": 2,
+  ""productsWeight"": 1
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 400 Bad Request",,,
+19,"productsWeight excede máximo permitido (ej. 2.6)","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": 12,
+  ""productsCount"": 2,
+  ""productsWeight"": 2.6
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 200 OK
+- isItPossibleToDeliver: false",,,
+20,"Omitir parámetro deliveryTime","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""productsCount"": 2,
+  ""productsWeight"": 1
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 400 Bad Request",,,
+21,"Omitir parámetro productsWeight","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{
+  ""deliveryTime"": 12,
+  ""productsCount"": 2
+}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 400 Bad Request",,,
+22,"Omitir todos los parámetros","1. El usuario tiene acceso a la API mediante Postman.
+2. La variable {{base_url}} está configurada correctamente.","Método: POST
+Endpoint: /order-and-go/v1/delivery
+
+Body:
+{}","1. Abrir Postman.
+2. Agrega una solicitud nueva.
+3. Seleccionar el método POST.
+4. Ingresar la URL del servidor: {{base_url}}
+5. Ingresa el endpoint: /order-and-go/v1/delivery
+6. Ir a la pestaña Body -> raw -> JSON.
+7. Introducir el cuerpo de la solicitud especificado en la columna ""Datos de la prueba"".
+8. Hacer clic en Send.
+9. Revisar el código de respuesta y el JSON devuelto por la API.","- Codigo de Respuesta: 400 Bad Request",,,

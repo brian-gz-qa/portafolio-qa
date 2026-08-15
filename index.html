@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brian Steven González Soto — QA Tester | Portafolio</title>
+  <meta name="description" content="Portafolio de QA Tester de Brian Steven González Soto: pruebas manuales, pruebas de API, diseño de casos de prueba y reporte de bugs.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1e293b; background: #f8fafc; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    header { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: #fff; padding: 48px 0 40px; }
+    header h1 { font-size: 2rem; margin-bottom: 6px; }
+    header .rol { color: #93c5fd; font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; }
+    header .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    header .tag { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 4px 14px; font-size: 0.85rem; }
+    section { padding: 40px 0; border-bottom: 1px solid #e2e8f0; }
+    h2 { font-size: 1.5rem; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    h3 { color: #1e3a8a; margin-bottom: 8px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .card p { margin-bottom: 8px; }
+    .problema { color: #b91c1c; }
+    .que-hice { color: #1e3a8a; }
+    .resultado { color: #15803d; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .badge { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; border-radius: 6px; padding: 3px 10px; font-size: 0.8rem; }
+    .contacto { display: flex; flex-wrap: wrap; gap: 16px; }
+    .contacto a { color: #1d4ed8; text-decoration: none; font-weight: 600; }
+    .contacto a:hover { text-decoration: underline; }
+    footer { padding: 24px 0; text-align: center; color: #64748b; font-size: 0.9rem; }
+    .link-repo { display: inline-block; margin-top: 8px; color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .link-repo:hover { text-decoration: underline; }
+    @media (max-width: 600px) { header h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Brian Steven González Soto</h1>
+      <div class="rol">QA Tester Trainee | Software QA Apprentice</div>
+      <div class="tags">
+        <span class="tag">Manual Testing</span>
+        <span class="tag">API Testing</span>
+        <span class="tag">Postman</span>
+        <span class="tag">Jira</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Git/GitHub</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="sobre-mi">
+    <div class="container">
+      <h2>🧑‍💻 Sobre mí</h2>
+      <p>Soy un <strong>QA Tester en formación</strong> con base en Ingeniería de Software y Comercio Exterior, apasionado por encontrar fallos donde nadie los ve. Actualmente curso el bootcamp de <strong>QA Engineer en TripleTen</strong>, donde diseño y ejecuto casos de prueba manuales y de API REST, valido interfaces con DevTools y Figma, y reporto bugs en Jira bajo metodología Scrum.</p>
+      <p>Mi trayectoria en comercio y atención al cliente me dio habilidades de comunicación y resolución de problemas bajo presión. Además, desarrollo agentes de IA para automatizar la generación de casos de prueba: rigor analítico + innovación.</p>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="container">
+      <h2>🚀 Proyectos</h2>
+
+      <div class="card">
+        <h3>1. Urban Routes — Pruebas de API REST (Sprint 4)</h3>
+        <p class="problema"><strong>Problema:</strong> Verificar la calidad del backend de una app de autos compartidos (endpoints de kits y productos).</p>
+        <p class="que-hice"><strong>Qué hice:</strong> Diseñé y ejecuté <strong>60+ casos de prueba</strong> en Postman cubriendo valores límite, tipos de datos inválidos, payloads vacíos e IDs inexistentes. Documenté bugs con severidad y prioridad en Jira.</p>
+        <p class="resultado"><strong>Resultado:</strong> Proyecto aprobado al 100%. Identifiqué bugs de alta severidad (500 Internal Server Error con tipos inválidos, fallos silenciosos) y aprendí a distinguir severidad vs. prioridad.</p>
+        <div class="badges"><span class="badge">Postman</span><span class="badge">API REST</span><span class="badge">Jira</span><span class="badge">JSON</span><span class="badge">Valores límite</span></div>
+        <a class="link-repo" href="Sprint_4_Pruebas_API/">Ver evidencias →</a>
+      </div>
+
+      <div class="card">
+        <h3>2. Urban Routes — Pruebas Funcionales Web (Sprint 3)</h3>
+        <p class="problema"><strong>Problema:</strong> Validar la calidad de una aplicación web de alquiler de automóviles (tarifas, método de pago y reserva).</p>
+        <p class="que-hice"><strong>Qué hice:</strong> Ejecuté pruebas funcionales y exploratorias en Chrome y Firefox. Documenté <strong>10+ bugs</strong> en Jira, incluyendo 2 críticos (validación rota en campos de tarjeta y reserva sin método de pago).</p>
+        <p class="resultado"><strong>Resultado:</strong> Proyecto aprobado al 100%. Aprendí a aislar variables, identificar causas raíz y reutilizar tickets en flujos finales.</p>
+        <div class="badges"><span class="badge">Pruebas manuales</span><span class="badge">Exploratorias</span><span class="badge">Jira</span><span class="badge">DevTools</span><span class="badge">UI/UX</span></div>
+        <a class="link-repo" href="Sprint_3_Pruebas_Web/">Ver evidencias →</a>
+      </div>
+
+      <div class="card">
+        <h3>3. Urban Routes — Casos de prueba y análisis de requisitos (Sprints 1 y 2)</h3>
+        <p class="problema"><strong>Problema:</strong> Analizar los requisitos de la app y diseñar la estrategia de pruebas inicial.</p>
+        <p class="que-hice"><strong>Qué hice:</strong> Mapas mentales de funcionalidades, casos de prueba con <strong>clases de equivalencia</strong>, <strong>valores límite</strong> y <strong>Pairwise testing</strong>, más diagramas de flujo.</p>
+        <p class="resultado"><strong>Resultado:</strong> Base sólida de técnicas de diseño de pruebas aplicadas a un caso real.</p>
+        <div class="badges"><span class="badge">Clases de equivalencia</span><span class="badge">Valores límite</span><span class="badge">Pairwise</span><span class="badge">Mapa mental</span></div>
+        <a class="link-repo" href="Sprint_1_Introduccion/">Sprint 1 →</a>
+        <a class="link-repo" href="Sprint_2_Tecnicas_Pruebas/">Sprint 2 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="educacion">
+    <div class="container">
+      <h2>📜 Educación y certificaciones</h2>
+      <div class="card">
+        <ul>
+          <li><strong>TripleTen</strong> — Bootcamp QA Engineer (en curso)</li>
+          <li><strong>SENA</strong> — Técnico en Operaciones de Comercio Exterior</li>
+          <li><strong>UTN</strong> — Ingeniería de Software (37 créditos aprobados)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <h2>📩 Contacto</h2>
+      <div class="card">
+        <div class="contacto">
+          <span>📧 <a href="mailto:gz.sotto@gmail.com">gz.sotto@gmail.com</a></span>
+          <span>🔗 <a href="https://www.linkedin.com/in/brian-gonzalez-qa/" target="_blank" rel="noopener">linkedin.com/in/brian-gonzalez-qa</a></span>
+          <span>📍 Pitalito, Huila, Colombia</span>
+        </div>
+        <p style="margin-top:12px; color:#64748b;">Abierto a nuevas oportunidades y conexiones en QA. ¡Conversemos!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Portafolio MVP — Sprint 5 · TripleTen (Curso de Preparación de Carrera). Actualizado: agosto 2026.
+    </div>
+  </footer>
+</body>
+</html>

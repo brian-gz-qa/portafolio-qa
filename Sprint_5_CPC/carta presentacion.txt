@@ -1,0 +1,28 @@
+[Ciudad, Fecha de hoy]
+
+[Nombre del Reclutador o "Equipo de Selección"]
+[Cargo del Reclutador, ej: Lead QA / Reclutador IT]
+[Nombre de la Empresa]
+
+Estimado/a [Nombre del Reclutador o "Equipo de Recursos Humanos"]:
+
+Cuando encontré la oportunidad de colaborar como [Nombre de la Vacante, ej: QA Tester Junior] en [Nombre de la Empresa], me llamó la atención de inmediato por su enfoque en [Misión u objetivo de la empresa, ej: el desarrollo de soluciones digitales escalables y de alto impacto]. Durante mi formación intensiva en Calidad de Software (QA) en TripleTen, adquirí experiencia práctica en el diseño de casos de prueba, testing funcional Web/UI mediante DevTools y Figma, y validación de APIs REST con Postman. Este rol me permitiría aplicar mi rigor analítico para garantizar productos sin errores y aportar al crecimiento del equipo.
+
+Creo que mi perfil como QA Tester, respaldado por mi formación en Ingeniería del Software y mi experiencia previa en auditoría de datos e inventarios, me otorga una ventaja competitiva única para la posición. Mi trayectoria me ha enseñado a detectar inconsistencias con rapidez, priorizar la precisión y trabajar bajo metodologías ágiles (Scrum).
+
+Entre mis principales contribuciones y proyectos destacan:
+• Pruebas de API REST & Backend: Diseñé y ejecuté pruebas manuales utilizando Postman y Apidoc, validando respuestas HTTP (JSON) e identificando discrepancias de datos antes del pase a producción.
+• Pruebas Funcionales Web (E2E): Evalué flujos críticos de usuario en plataformas web, reportando y gestionando hallazgos en Jira con documentación detallada de evidencia.
+• Innovación & Eficiencia con IA: Desarrollé un agente de IA personalizado para acelerar la interpretación de requerimientos, logrando la estructuración de más de 60 casos de prueba y optimizando los tiempos del ciclo STLC.
+
+Lo que más me motiva de [Nombre de la Empresa] es su compromiso con [mencionar un valor o proyecto reciente de la empresa]. Estoy entusiasmado por la posibilidad de aportar mis habilidades técnicas y mi mentalidad orientada a la calidad para asegurar la excelencia de sus desarrollos.
+
+Me encantaría la oportunidad de conversar en una entrevista sobre cómo mi perfil y conocimientos pueden sumar valor a su equipo. Agradezco de antemano su tiempo y consideración.
+
+Atentamente,
+
+Brian Steven González Soto
+QA Software Tester / QA Apprentice
+gz.sotto@gmail.com | (+57) 3232011378
+LinkedIn: www.linkedin.com/in/steven-sotto-56b02b404
+Pitalito, Colombia
