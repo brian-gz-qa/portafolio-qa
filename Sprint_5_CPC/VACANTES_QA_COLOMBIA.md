@@ -48,63 +48,76 @@ Búsqueda enfocada en perfiles **trainee/junior/sin experiencia** y **remoto** p
 - **Coincidencia:** ⭐⭐⭐⭐ (sector seguros pero sin requisito de experiencia en aseguradoras visible)
 - **Aplicar:** LinkedIn Jobs → busca "QA Tester VUMI Medellín"
 
+### 7. Tester QA Software Sector Financiero | MANPOWER (Bogotá)
+- **Salario:** $3.500.000 – $4.000.000 COP | Presencial | Bogotá
+- **Requisitos:** profesionales apasionados por QA, pruebas funcionales. Publicada hace 4 días.
+- **Coincidencia:** ⭐⭐⭐⭐ (sector financiero, pero el texto no pide años específicos de experiencia)
+- **Aplicar:** elempleo: `https://www.elempleo.com/co/ofertas-empleo/trabajo-tester-qa` (busca "Tester qa software sector financiero")
+
+### 8. Ingeniero de Pruebas / Tester QA (Remoto, proyecto 10 meses) | PRAXIS I.T Colombia
+- **Ubicación:** Remoto | Contrato obra/labor (proyecto 10 meses) | Salario a convenir
+- **Requisitos:** diseño y ejecución de casos de prueba funcionales; automatización de scripts; pruebas de integración; documentación de incidencias.
+- **Coincidencia:** ⭐⭐⭐⭐ (remoto + pruebas funcionales + reporte de bugs = tu perfil)
+- **Publicada:** hace 1 mes
+- **Aplicar:** elempleo (misma búsqueda, "Ingeniero de pruebas / tester qa")
+
 ---
 
 ## 🟡 PRIORIDAD MEDIA — remoto, SDET o con requisitos adicionales
 
-### 7. Junior SDET – Remote Work | BairesDev (Medellín/remoto)
+### 9. Junior SDET – Remote Work | BairesDev (Medellín/remoto)
 - **Requisitos:** SDET junior remoto. BairesDev contrata muchísimo en LATAM y tiene programas de entrada.
 - **Publicada:** hace 3 días
 - **Coincidencia:** ⭐⭐⭐⭐ (remoto + junior; piden algo de automatización — tu Python ayuda)
 - **Aplicar:** LinkedIn Jobs → busca "BairesDev Junior SDET"
 
-### 8. Ingeniero de Desarrollo de Software en Pruebas – Trabajo Remoto | BairesDev
+### 10. Ingeniero de Desarrollo de Software en Pruebas – Trabajo Remoto | BairesDev
 - **Publicada:** hace 4 días | Remoto
 - **Aplicar:** LinkedIn Jobs → busca "BairesDev Ingeniero de Desarrollo en Pruebas"
 
-### 9. Tester QA (Remoto) | Zemsania Colombia S.A.S
+### 11. Tester QA (Remoto) | Zemsania Colombia S.A.S
 - **Salario:** $3.500.000 – $4.000.000 COP | Remoto
 - **Requisitos:** pruebas manuales y diseño de casos; Azure DevOps; fundamentos de GenAI (prompts, LLMs); automatización; pruebas de IA Agente.
 - **Coincidencia:** ⭐⭐⭐⭐ (remoto + pruebas manuales + tu experiencia con agentes de IA = muy buen encaje)
 - **Publicada:** hace 1 mes
 - **Aplicar:** elempleo (búsqueda "tester qa" + Zemsania)
 
-### 10. Automation QA Engineer | Plan A Technologies (Envigado, Antioquia)
+### 12. Automation QA Engineer | Plan A Technologies (Envigado, Antioquia)
 - **Publicada:** hace 19 horas → **revisa ya**
 - **Coincidencia:** ⭐⭐⭐ (automatización — si avanzas en tu Python, aplica)
 - **Aplicar:** LinkedIn Jobs → busca "Plan A Technologies QA Envigado"
 
-### 11. QA Engineer – IBM (AS/400) | GFT Technologies (Medellín)
+### 13. QA Engineer – IBM (AS/400) | GFT Technologies (Medellín)
 - **Publicada:** hace 3 días
 - **Coincidencia:** ⭐⭐⭐ (mainframe AS/400 — nicho, pero GFT contrata juniors)
 - **Aplicar:** LinkedIn Jobs → busca "GFT Technologies QA Medellín"
 
-### 12. Analista Data Testing | Choucair Testing S.A. (Medellín)
+### 14. Analista Data Testing | Choucair Testing S.A. (Medellín)
 - **Publicada:** hace 1 mes | **Choucair de nuevo** — revisa si hay versiones junior.
 - **Aplicar:** LinkedIn Jobs → busca "Choucair Data Testing"
 
-### 13. SDET | Caseware (Medellín)
+### 15. SDET | Caseware (Medellín)
 - **Publicada:** hace 1 semana
 - **Coincidencia:** ⭐⭐⭐ (SDET = automatización; útil como aspiración)
 - **Aplicar:** LinkedIn Jobs → busca "Caseware SDET Medellín"
 
-### 14. Quality Analyst Trilingual (Portugués-Inglés-Español) | TaskUs (Medellín)
+### 16. Quality Analyst Trilingual (Portugués-Inglés-Español) | TaskUs (Medellín)
 - **Publicada:** hace 3 días
 - **Coincidencia:** ⭐⭐⭐ (exige 3 idiomas; si tu inglés es B1+, puede aplicar)
 - **Aplicar:** LinkedIn Jobs → busca "TaskUs Quality Analyst Medellín"
 
-### 15. QA Manual – Sector Bancario | BC Tecnología (Bogotá, híbrido)
+### 17. QA Manual – Sector Bancario | BC Tecnología (Bogotá, híbrido)
 - **Salario:** 1.500 – 2.000 USD/mes
 - **Coincidencia:** ⭐⭐⭐
 - **Aplicar:** `https://www.getonbrd.com/jobs-Pruebas%20de%20QA` (busca "QA Manual – Sector Bancario")
 
-### 16. QA Automatizador/a (LATAM) y otras remotas | BC Tecnología — Remoto
+### 18. QA Automatizador/a (LATAM) y otras remotas | BC Tecnología — Remoto
 - **Aplicar:** `https://www.getonbrd.com/jobs-Pruebas%20de%20QA` (busca "LATAM")
 
-### 17. QA Engineer / QA Analyst (LATAM) | BC Tecnología — Remoto (freelance)
+### 19. QA Engineer / QA Analyst (LATAM) | BC Tecnología — Remoto (freelance)
 - **Aplicar:** getonbrd (misma página)
 
-### 18. QA Manual (Proyecto 3 Meses) | LeytonMedia — Remoto
+### 20. QA Manual (Proyecto 3 Meses) | LeytonMedia — Remoto
 - **Aplicar:** getonbrd (misma página)
 
 ---
@@ -153,6 +166,7 @@ Búsqueda enfocada en perfiles **trainee/junior/sin experiencia** y **remoto** p
 - [ ] Postularse a las **2 de Cinte Colombia** (#3, #4)
 - [ ] Postularse a **Choucair Testing** (#2 y nuevas publicaciones)
 - [ ] Postularse a **ControlBox Corp** (#5)
+- [ ] Postularse a **MANPOWER – Tester QA financiero** (#7) y **PRAXIS – remoto** (#8)
 - [ ] Crear alertas de empleo en LinkedIn (5 keywords)
 - [ ] Conectar con reclutadores de Sofka, Choucair, Cinte y BairesDev
 - [ ] Revisar esta lista cada lunes y actualizarla
