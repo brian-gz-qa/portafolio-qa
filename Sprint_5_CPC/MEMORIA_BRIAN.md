@@ -145,6 +145,14 @@
 - Probar sin publicar: `python rutina_diaria.py --solo-revisar`
 - Publicar con tema: `python rutina_diaria.py --tema api_basico`
 - Generar solo imagen: `python gen_imagen_contenido.py errores_casos -o img.png`
+- Detectar vacantes solas: `python detectar_vacantes.py`
+
+**Detección de vacantes (`detectar_vacantes.py`) — paso 4 de la rutina:**
+- Busca en LinkedIn Jobs ("QA Tester Junior" + "Analista de Calidad QA", últimos 7 días) y elempleo
+- Puntúa cada vacante contra el perfil (regla dura: debe ser QA/testing/calidad, no basta 'junior')
+- Genera `vacantes_hoy.txt` con las mejores coincidencias, enlace directo de aplicación y razones de coincidencia
+- Puntos clave: junior/trainee/sin experiencia +4/+5, manual +3, api/postman +3, remoto +2; senior/lead -5
+- Se integra a la rutina diaria como paso 4 (después de mensajes) y avisa las top 5
 
 **Textos de publicación disponibles** (en `rutina_diaria.py` → TEXTOS_PUBLICACION): errores_casos, api_basico, bug_jira, equivalencia
 

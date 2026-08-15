@@ -211,6 +211,18 @@ def main():
         print("\n=== 3. REVISAR MENSAJES ===")
         revisar_mensajes(page)
 
+        # 4. Detectar vacantes que coincidan con el perfil
+        print("\n=== 4. DETECCIÓN DE VACANTES ===")
+        try:
+            from detectar_vacantes import detectar
+            puntuadas = detectar(page, out_path="vacantes_hoy.txt")
+            top = [v for v in puntuadas if v["puntos"] >= 5]
+            print(f"[*] Vacantes con alta coincidencia hoy: {len(top)}")
+            for v in top[:5]:
+                print(f"    ⭐ {v['puntos']}pts - {v['titulo'][:60]} ({v.get('empresa','?')})")
+        except Exception as e:
+            print("[!] Error en detección de vacantes:", str(e)[:80])
+
         print("\n✅ RUTINA DIARIA COMPLETADA")
     finally:
         try:
