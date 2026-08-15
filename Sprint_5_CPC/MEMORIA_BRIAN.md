@@ -137,7 +137,8 @@
 **Imágenes:** `gen_imagen_contenido.py` — genera PNG 1200x630 (HTML→PNG con Edge) con marca "BRIAN GONZÁLEZ · QA"
 
 **Requisito CRÍTICO:** Edge debe estar abierto con la sesión de LinkedIn y el puerto 9222.
-- Lanzador: `LINKEDIN_ABRIR.bat` (en el Escritorio, creado por `instalar_cronograma.bat`)
+- Lanzador: **`LINKEDIN_ABRIR.bat` en el Escritorio** (doble clic cada mañana antes de las 10:00)
+- Verificado 15/ago: tarea **Ready** (Lista), disparador 10:00 diario
 - Si Edge no está abierto con el puerto, la rutina NO puede conectarse
 
 **Comandos útiles:**
