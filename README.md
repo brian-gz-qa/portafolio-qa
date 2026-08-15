@@ -4,6 +4,8 @@ Hola 👋 Soy **Brian Steven González Soto**, QA Tester en formación en **Trip
 
 **Rol objetivo:** QA Engineer | Manual & API Testing
 
+🌐 **Portafolio en línea:** [brian-gz-qa.github.io/portafolio-qa](https://brian-gz-qa.github.io/portafolio-qa/)
+
 ---
 
 ## 🧑‍💻 Sobre mí
