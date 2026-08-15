@@ -15,6 +15,8 @@ Entre mis principales contribuciones y proyectos destacan:
 • Pruebas Funcionales Web (E2E): Evalué flujos críticos de usuario en plataformas web, reportando y gestionando hallazgos en Jira con documentación detallada de evidencia.
 • Innovación & Eficiencia con IA: Desarrollé un agente de IA personalizado para acelerar la interpretación de requerimientos, logrando la estructuración de más de 60 casos de prueba y optimizando los tiempos del ciclo STLC.
 
+Puede revisar las evidencias de estos proyectos en mi portafolio en línea: https://brian-gz-qa.github.io/portafolio-qa/ — donde encontrará casos de prueba, reportes de bugs y los entregables de cada sprint del bootcamp.
+
 Lo que más me motiva de [Nombre de la Empresa] es su compromiso con [mencionar un valor o proyecto reciente de la empresa]. Estoy entusiasmado por la posibilidad de aportar mis habilidades técnicas y mi mentalidad orientada a la calidad para asegurar la excelencia de sus desarrollos.
 
 Me encantaría la oportunidad de conversar en una entrevista sobre cómo mi perfil y conocimientos pueden sumar valor a su equipo. Agradezco de antemano su tiempo y consideración.
@@ -22,7 +24,8 @@ Me encantaría la oportunidad de conversar en una entrevista sobre cómo mi perf
 Atentamente,
 
 Brian Steven González Soto
-QA Software Tester / QA Apprentice
+QA Tester Trainee | Software QA Apprentice | Manual & API Testing | Postman, Jira, Python
 gz.sotto@gmail.com | (+57) 3232011378
-LinkedIn: www.linkedin.com/in/steven-sotto-56b02b404
+LinkedIn: www.linkedin.com/in/brian-gonzalez-qa
+Portafolio: https://brian-gz-qa.github.io/portafolio-qa/
 Pitalito, Colombia

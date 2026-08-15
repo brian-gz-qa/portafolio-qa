@@ -1,0 +1,31 @@
+[City, Today's Date]
+
+[Recruiter Name or "Hiring Team"]
+[Recruiter Title, e.g., Lead QA / IT Recruiter]
+[Company Name]
+
+Dear [Recruiter Name or "Human Resources Team"]:
+
+When I found the opportunity to join as [Job Title, e.g., Junior QA Tester] at [Company Name], I was immediately drawn to your focus on [Company mission or goal, e.g., building scalable, high-impact digital solutions]. During my intensive Software Quality Assurance (QA) training at TripleTen, I gained hands-on experience designing test cases, performing functional Web/UI testing with DevTools and Figma, and validating REST APIs with Postman. This role would allow me to apply my analytical rigor to deliver bug-free products and contribute to the team's growth.
+
+I believe my profile as a QA Tester — backed by my Software Engineering background and previous experience in data and inventory auditing — gives me a unique competitive advantage for this position. My career path has taught me to spot inconsistencies quickly, prioritize accuracy, and work under agile methodologies (Scrum).
+
+Key contributions and projects:
+• REST API & Backend Testing: Designed and executed manual tests using Postman and Apidoc, validating HTTP responses (JSON) and identifying data discrepancies before release to production.
+• Functional Web Testing (E2E): Evaluated critical user flows on web platforms, reporting and managing findings in Jira with detailed evidence documentation.
+• AI-Driven Innovation & Efficiency: Built a custom AI agent to speed up requirements interpretation, structuring 60+ test cases and optimizing the STLC cycle.
+
+You can review the evidence of these projects in my online portfolio: https://brian-gz-qa.github.io/portafolio-qa/ — where you'll find test cases, bug reports, and deliverables from each bootcamp sprint.
+
+What motivates me most about [Company Name] is your commitment to [mention a value or recent project of the company]. I'm excited about the possibility of contributing my technical skills and quality-driven mindset to ensure the excellence of your products.
+
+I would love the opportunity to discuss in an interview how my profile and knowledge can add value to your team. Thank you in advance for your time and consideration.
+
+Sincerely,
+
+Brian Steven González Soto
+QA Tester Trainee | Software QA Apprentice | Manual & API Testing | Postman, Jira, Python
+gz.sotto@gmail.com | (+57) 3232011378
+LinkedIn: www.linkedin.com/in/brian-gonzalez-qa
+Portfolio: https://brian-gz-qa.github.io/portafolio-qa/
+Pitalito, Colombia
