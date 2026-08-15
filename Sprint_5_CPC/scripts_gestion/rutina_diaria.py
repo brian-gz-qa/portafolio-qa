@@ -3,11 +3,11 @@
 RUTINA DIARIA DE LINKEDIN (modo humano)
 --------------------------------------
 1. Comenta en 1-2 publicaciones del feed con valor
-2. Publica 1 post con imagen generada (si es dia de publicacion)
+2. Publica 1 post con imagen generada (turno: manana / mediodia / noche)
 3. Revisa mensajes y conexiones nuevas
 
-Uso:  python rutina_diaria.py [--solo-revisar] [--tema errores_casos]
-Seguridad: pausas aleatorias humanas, 1 publicacion/dia, 1-2 comentarios/dia.
+Uso:  python rutina_diaria.py [--solo-revisar] [--turno manana|mediodia|noche]
+Seguridad: pausas aleatorias humanas, 3 publicaciones/dia (1 por turno), 1-2 comentarios/dia.
 """
 import sys, random, time, os, argparse, datetime
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -17,6 +17,20 @@ from gen_imagen_contenido import generar
 
 def pausa(a, b):
     time.sleep(random.uniform(a, b))
+
+TURNOS = {
+    "manana":   {"hora": "08:00", "offset": 0},
+    "mediodia": {"hora": "13:00", "offset": 1},
+    "noche":    {"hora": "20:00", "offset": 2},
+}
+# Temas en orden de rotacion: cada turno usa un tema distinto por dia
+TEMAS_ROTACION = ["errores_casos", "api_basico", "bug_jira", "equivalencia", "pregunta"]
+
+def tema_para_turno(turno):
+    """Elige el tema del turno segun el dia (sin repetir entre turnos del mismo dia)."""
+    dia = datetime.date.today().toordinal()
+    base = TURNOS[turno]["offset"]
+    return TEMAS_ROTACION[(dia + base) % len(TEMAS_ROTACION)]
 
 COMENTARIOS = [
     "Muy buen contenido. Como QA Tester en formación, estos temas me sirven muchísimo para entender mejor el ecosistema. Gracias por compartir 🙌",
@@ -30,6 +44,7 @@ TEXTOS_PUBLICACION = {
     "api_basico": "🧪 Primeros pasos probando APIs con Postman\n\nEn el Sprint 4 de TripleTen validé APIs REST y esto es lo que todo QA debe dominar al inicio:\n\n✅ Métodos HTTP: GET (leer), POST (crear), PUT (actualizar), DELETE (borrar).\n✅ Status codes: 200 OK, 201 Creado, 400 Bad Request, 401 No autorizado, 404 No encontrado, 500 Error interno.\n✅ Probá siempre: valores límite, IDs inexistentes y datos inválidos.\n✅ Documentá cada caso: request, response y resultado esperado.\n\n📌 Escribí 60+ casos de prueba de API en mi portafolio: https://brian-gz-qa.github.io/portafolio-qa/\n\n¿Ya probaste APIs como QA? Cuéntame tu experiencia 👇\n\n#QA #APITesting #Postman #SoftwareTesting #TripleTen",
     "bug_jira": "🐛 ¿Cómo reportar un bug que los devs entiendan?\n\nDurante el bootcamp de TripleTen documenté 10+ bugs en Jira. La estructura que funciona:\n\n📋 Título claro: qué pasa, dónde, en qué condición (ej: \"Validación rota en campo de tarjeta\").\n📌 Pasos para reproducir: 1, 2, 3... exactos.\n✅ Resultado esperado vs. ❌ Real: la comparación es lo que hace el bug evidente.\n🎬 Evidencia: captura de pantalla o video siempre.\n🔢 Severidad y prioridad: crítico ≠ cosmético.\n\n💡 Un buen reporte de bug es la mitad del arreglo.\n\n¿Qué le pones a tus reportes de bugs? 👇\n\n#QA #BugReport #Jira #SoftwareTesting #TripleTen",
     "equivalencia": "🧠 Clases de equivalencia: prueba menos, cubre más\n\nUna de las primeras técnicas que aprendí en TripleTen y que cambió mi forma de testear:\n\n➡️ En vez de probar cada dato posible (imposible), agrupá las entradas en CLASES con el mismo comportamiento.\n\n💡 Ejemplo: un campo que acepta edades 18-65 → una clase válida (ej: 25) y dos inválidas (ej: 17 y 66). Con 3 datos cubrís miles de posibilidades.\n\n✅ Menos casos, mejor cobertura, bugs encontrados más rápido.\n\n¿Usás esta técnica en tus pruebas? 👇\n\n#QA #TestDesign #ISTQB #SoftwareTesting #TripleTen",
+    "pregunta": "🤔 ¿Sabías que el 40% de los bugs se encuentran probando valores LÍMITE?\n\nEn mi bootcamp de TripleTen descubrí que los errores de software se esconden casi siempre en los bordes: el primer valor válido, el último, y justo el que no debería pasar.\n\n💡 Ejemplo rápido: si un campo acepta 1-100 caracteres, probá con:\n✅ 1 carácter (mínimo válido)\n✅ 100 caracteres (máximo válido)\n❌ 0 caracteres (inválido)\n❌ 101 caracteres (fuera de rango)\n\nCon 4 casos encontrás bugs que 100 pruebas 'normales' no verían.\n\n¿Ya aplicás las pruebas de límites en tus test cases? 👇\n\n#QA #SoftwareTesting #TestCases #ISTQB #TripleTen",
 }
 
 def comentar_en_feed(page, veces=1):
@@ -190,9 +205,28 @@ def revisar_mensajes(page):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--solo-revisar", action="store_true", help="Solo revisar feed y mensajes, sin publicar")
-    ap.add_argument("--tema", default="errores_casos", help="Tema de la publicacion")
+    ap.add_argument("--turno", default=None, choices=list(TURNOS.keys()), help="Turno del dia (manana/mediodia/noche)")
+    ap.add_argument("--tema", default=None, help="Tema fijo de la publicacion (opcional)")
     ap.add_argument("--sin-imagen", action="store_true", help="No generar imagen")
     a = ap.parse_args()
+
+    # Determinar tema: fijo, por turno, o por hora actual
+    if a.tema:
+        tema = a.tema
+        turno = a.turno or "manana"
+    else:
+        if a.turno:
+            turno = a.turno
+        else:
+            hora = datetime.datetime.now().hour
+            if hora < 11:
+                turno = "manana"
+            elif hora < 17:
+                turno = "mediodia"
+            else:
+                turno = "noche"
+        tema = tema_para_turno(turno)
+    print(f"[*] Turno: {turno} | Tema: {tema}")
 
     p, browser, page = conectar()
     try:
@@ -204,7 +238,7 @@ def main():
         # 2. Publicar (si no es solo-revisar)
         if not a.solo_revisar:
             print("\n=== 2. PUBLICACIÓN DIARIA ===")
-            ok = publicar_post(page, a.tema, con_imagen=not a.sin_imagen)
+            ok = publicar_post(page, tema, con_imagen=not a.sin_imagen)
             print(f"[*] Publicacion: {'OK' if ok else 'FALLÓ'}")
 
         # 3. Revisar mensajes
